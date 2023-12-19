@@ -48,13 +48,13 @@ function file_getinfo() {
         echo "Error: Please provide a file name."
     else
         file="$2"
-        if [ "$1" == "--size" -o "$1" == "-s" ]; then
+        if [[ "$1" == "--size" -o "$1" == "-s" ]]; then
             stat -c %s "$file"
-        elif [ "$1" == "--permissions" -o "$1" == "-p" ]; then
+        elif [[ "$1" == "--permissions" -o "$1" == "-p" ]]; then
             stat -c %A "$file"
-        elif [ "$1" == "--owner" -o "$1" == "-o" ]; then
+        elif [[ "$1" == "--owner" -o "$1" == "-o" ]]; then
             stat -c %U "$file"
-        elif [ "$1" == "--last-modified" -o "$1" == "-m" ]; then
+        elif [[ "$1" == "--last-modified" -o "$1" == "-m" ]]; then
             stat -c %y "$file"
         else
             # Default output
